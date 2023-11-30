@@ -1,0 +1,57 @@
+// Lab8 number
+function findCircle(radius) {
+    const circumference = 2 * Math.PI * radius;
+    return circumference;
+}
+const radius = 10;
+const result = findCircle(radius);
+
+console.log(`ความยาวเส้นรอบวงของวงกลมรัศมี ${radius} คือ ${result}`);
+
+// Lab9 number
+function rectangleLine(h,w){
+    return lineArea = Math.sqrt(Math.pow(h,2) + Math.pow(w,2));
+};
+
+let heigh = parseFloat(prompt('โปรดกรอกความสูง'));
+let width = parseFloat(prompt('โปรดกรอกความยาว'));
+alert(`เส้นทะแยงมุมของพื้นที่สีเหลี่ยม width: ${width} X heigh: ${heigh} = ${rectangleLine(heigh, width).toFixed(2)}`);
+
+
+// Lab2 Accumulator
+function Accumulator(stringValue){
+
+    this.currentValue = parseInt(stringValue);
+
+    this.read = function() {
+        let input = parseFloat(prompt('ใส่ค่ามา : '));
+        this.currentValue += input;
+    }
+
+    this.show = function(){
+        alert(`ค่า currentValue คือ ${this.currentValue}`);
+    };
+
+}
+
+let accumulator = new Accumulator(prompt('กรอกค่าเริ่มต้น'));
+
+accumulator.read();
+accumulator.show();
+
+accumulator.read();
+accumulator.show();
+
+accumulator.read();
+accumulator.show();
+
+// Lab5 String
+function truncate(str, length) {
+    length = parseInt(length);
+    const truncatedString = str.length > length ? str.substr(0, length) + '...' : str;
+    return truncatedString;
+}
+
+let string = prompt("กรอกตัวอักษรมา : ");
+let len = prompt("กรอกความยาวมา : ");
+alert(truncate(string, len));
